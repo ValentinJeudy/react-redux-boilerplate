@@ -11,15 +11,17 @@ export default class Header extends Component {
     ]
   }
 
+
   render () {
     const { menuItems } = this.state
-    const items = menuItems.map((item) => {
+    const items = menuItems.map((item, index) => {
       return  <li
                 style={itemStyle}
                 className="menu-item"
+                key={index}
               >
                 <Link style={{ color: '#fff'}} to={item.link}>
-                  {item.name}
+                  { item.name }
                 </Link>
               </li>
     })
@@ -27,7 +29,7 @@ export default class Header extends Component {
     return (
       <div style={headerStyle} className="header">
         <Link to="/">
-          <h2 style={titleStyle}>Header</h2>
+          <h2 style={titleStyle}>Home</h2>
         </Link>
         <ul style={menuStyle} className="menu">
           { items }
