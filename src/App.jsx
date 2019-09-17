@@ -1,20 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import Header from './components/Common/Header'
-import Home from './components/views/Home'
-// import Page from "./views/Page";
+import Home from './components/Home/Home'
+import Contact from './components/Contact/Contact'
 
-export default class App extends Component{
-	render () {
-		return (
-			<Router>
-				<Header />
-				<Route
-					path="/"
-					exact
-					render={(routeProps) => <Home { ...routeProps }/>} />
-			</Router>
-		)
-	}
+const App = () => {
+	return (
+		<Router>
+			<Header />
+			<Route
+				path="/"
+				exact
+				component={Home} />
+			<Route
+				path="/contact"
+				component={Contact} />
+		</Router>
+	)
 }
+
+export default App

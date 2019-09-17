@@ -1,0 +1,19 @@
+form {
+  width: 30rem;
+  .form-field {
+    margin: .7rem 0;
+    input {
+      float: right;
+    }
+  }
+
+  button {
+    padding: 0 .5rem;
+    height: 1.7rem;
+    outline: 0;
+    float: right;
+    color: #fff;
+    background-color: #000;
+    border: 0;
+  }
+}
